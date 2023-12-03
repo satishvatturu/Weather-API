@@ -142,3 +142,23 @@
     font-size: 16px;
     font-weight: 700;
 }
+
+@media screen and (max-width: 560px) {
+    .container-1>h1 {
+        color: #FFF;
+        text-align: center;
+        font-size: 60px;
+        font-weight: 700;
+    }
+    .container-1>button {
+        width: 250px;
+        height: 60px;
+        background: #FFF;
+        border: none;
+        color: #000;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 300;
+        cursor: pointer;
+    }
+  }
