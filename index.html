@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="container-1">
+        <h1>Weather Api </h1>
+        <button class="fetch-btn">Fetch Data</button>
+    </div>
+
+    <div class="container-2">
+        <div class="main-div-1">
+            <div class="title-div">
+                <h1>Welcome To The Weather App</h1>
+                <h2>Here is your current location</h2>
+            </div>
+            <div class="cords-div">
+                <div class="cords">
+                    <p id="lat">Lat : 1298838</p>
+                </div>
+                <div class="cords">
+                    <p id="lon">Long : 2383273278</p>
+                </div>
+            </div>
+            <div class="map-div">
+                <iframe src="https://maps.google.com/maps?q=16.5062, 80.6480&output=embed"
+                    width="360"
+                    height="270" 
+                    frameborder="0" 
+                    style="border:0"
+                    >
+                </iframe>
+            </div>
+        </div>
+        <div class="main-div-2">
+            <h2>Your Weather Data</h2>
+            <div class="data">
+                <!-- <div class="weather-data" id="location"></div>
+                <div class="weather-data" id="wind-speed"></div>
+                <div class="weather-data" id="humidity"></div>
+                <div class="weather-data" id="time-zone"></div>
+                <div class="weather-data" id="pressure"></div>
+                <div class="weather-data" id="wind-direc"></div>
+                <div class="weather-data" id="uv-index">UV Index : 500</div>
+                <div class="weather-data" id="feels-like"></div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
