@@ -2,6 +2,7 @@ const page1 = document.querySelector('.container-1');
 const page2 = document.querySelector('.container-2')
 const weatherData = document.querySelector('.data');
 const fetchBtn = document.querySelector('.fetch-btn');
+const mapDiv = document.querySelector('.map-div');
 
  const apiKey = "0b42b7fd09b202659157d739b7f01067";
  const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&";
@@ -34,7 +35,7 @@ const fetchBtn = document.querySelector('.fetch-btn');
  })
 
  function showPosition(data) {
-    // console.log(data);
+    console.log(data);
     let lat = data.coords.latitude;
     let lon = data.coords.longitude;
     document.querySelector('#lat').innerText = `Lat : ${lat}`;
@@ -67,6 +68,15 @@ const fetchBtn = document.querySelector('.fetch-btn');
     var windDirectionDegrees = data.wind.deg;
     var windDirectionCardinal = degreesToCardinal(windDirectionDegrees);
 
+    mapDiv.innerHTML = `
+    <iframe
+    src="https://maps.google.com/maps?q=${lat}, ${lon}&z=15&output=embed" 
+    width="360" 
+    height="270" 
+    frameborder="0" 
+    style="border:0">
+    </iframe>
+    `
 
     weatherData.innerHTML = `
     <div class="weather-data" id="location">Location : ${data.name}</div>
